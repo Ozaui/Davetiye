@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  /* Belt-and-suspenders: prevent any body-level scroll */
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background: radial-gradient(ellipse at 50% 35%, #fef8ef 0%, #f5e9d4 55%, #e9d9bc 100%);
+}
+
+/*
+  position: fixed removes #root from the document flow entirely.
+  Nothing inside it can make the page scroll, regardless of width.
+  inset: 0 sizes it to exactly the viewport.
+*/
+#root {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}

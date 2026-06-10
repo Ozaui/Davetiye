@@ -1,0 +1,9 @@
+.scene {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Fill the fixed #root — no need for explicit vw/vh */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

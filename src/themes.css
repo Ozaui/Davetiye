@@ -1,0 +1,165 @@
+/*
+  Theme tokens. The selected theme class is applied to <body> so the
+  variables cascade everywhere — including the fullscreen overlay portal
+  rendered directly under <body>.
+
+  :root carries the gold defaults so components render correctly even
+  before a theme is chosen (e.g. picker previews override locally).
+*/
+
+:root,
+.theme-gold {
+  --bg: radial-gradient(ellipse at 50% 35%, #fef8ef 0%, #f5e9d4 55%, #e9d9bc 100%);
+
+  /* Invitation card */
+  --accent: #8b6914;
+  --accent-rgb: 139, 105, 20;
+  --ink: #5a3e0a;
+  --ink-strong: #4a2e00;
+  --ink-soft: #6b4e10;
+  --link: #7a5500;
+  --link-hover: #5a3800;
+  --card-bg: linear-gradient(165deg, #fdf6e3 0%, #f9edca 30%, #f4e0a8 70%, #edd898 100%);
+  --card-shadow:
+    0 8px 48px rgba(100, 65, 10, 0.22),
+    0 2px 10px rgba(100, 65, 10, 0.14),
+    inset 0 0 60px rgba(210, 170, 80, 0.12);
+
+  /* Envelope */
+  --env-body-bg: linear-gradient(148deg, #fdf8ee 0%, #f6ecce 55%, #ede1b2 100%);
+  --env-flap-bg: linear-gradient(168deg, #fdf6e6 0%, #f0e2b0 55%, #e6d48e 100%);
+  --env-border: rgba(170, 128, 45, 0.22);
+  --env-shadow:
+    0 4px 24px rgba(160, 110, 40, 0.2),
+    0 1px 6px rgba(140, 90, 20, 0.14);
+  --env-shadow-hover:
+    0 10px 36px rgba(160, 110, 40, 0.26),
+    0 2px 8px rgba(140, 90, 20, 0.18);
+  --shade-rgb: 185, 140, 42;
+  --seam: #9b7328;
+
+  /* Wax seal */
+  --wax-bg: radial-gradient(circle at 37% 30%, #cc4444, #7a1008);
+  --wax-ring: rgba(220, 160, 148, 0.38);
+  --wax-text: #fce6e0;
+
+  /* Hint + overlay */
+  --hint-rgb: 140, 90, 20;
+  --overlay: rgba(120, 80, 25, 0.22);
+}
+
+/* ---- Gece Mavisi: deep navy & gold ---- */
+.theme-night {
+  --bg: radial-gradient(ellipse at 50% 30%, #243154 0%, #161f3a 55%, #0c1226 100%);
+
+  --accent: #d4af37;
+  --accent-rgb: 212, 175, 55;
+  --ink: #f3e6c2;
+  --ink-strong: #faf0d8;
+  --ink-soft: #d9c896;
+  --link: #e3c668;
+  --link-hover: #f3dd92;
+  --card-bg: linear-gradient(165deg, #26335c 0%, #1e2a4e 45%, #16203e 100%);
+  --card-shadow:
+    0 8px 48px rgba(0, 0, 0, 0.5),
+    0 2px 10px rgba(0, 0, 0, 0.4),
+    inset 0 0 60px rgba(212, 175, 55, 0.07);
+
+  --env-body-bg: linear-gradient(148deg, #2b3760 0%, #222d50 55%, #1a2440 100%);
+  --env-flap-bg: linear-gradient(168deg, #33406e 0%, #283358 55%, #1f2947 100%);
+  --env-border: rgba(212, 175, 55, 0.3);
+  --env-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.45),
+    0 1px 6px rgba(0, 0, 0, 0.35);
+  --env-shadow-hover:
+    0 10px 36px rgba(0, 0, 0, 0.55),
+    0 2px 8px rgba(0, 0, 0, 0.4);
+  --shade-rgb: 8, 13, 32;
+  --seam: #d4af37;
+
+  --wax-bg: radial-gradient(circle at 37% 30%, #f0d27a, #8a6a10);
+  --wax-ring: rgba(255, 240, 200, 0.35);
+  --wax-text: #3a2c05;
+
+  --hint-rgb: 220, 185, 90;
+  --overlay: rgba(4, 8, 20, 0.5);
+}
+
+/* ---- Gül Kurusu: blush rose ---- */
+.theme-rose {
+  --bg: radial-gradient(ellipse at 50% 35%, #fdf4f2 0%, #f7e2dd 55%, #eed0c9 100%);
+
+  --accent: #b05a6e;
+  --accent-rgb: 176, 90, 110;
+  --ink: #6e3040;
+  --ink-strong: #5a2433;
+  --ink-soft: #8a4a58;
+  --link: #9c4256;
+  --link-hover: #7a2e40;
+  --card-bg: linear-gradient(165deg, #fdf5f3 0%, #fae7e2 30%, #f4d6cd 70%, #eec9bf 100%);
+  --card-shadow:
+    0 8px 48px rgba(140, 60, 60, 0.2),
+    0 2px 10px rgba(140, 60, 60, 0.12),
+    inset 0 0 60px rgba(225, 160, 150, 0.14);
+
+  --env-body-bg: linear-gradient(148deg, #fdf2ef 0%, #f8ded7 55%, #f0cbc0 100%);
+  --env-flap-bg: linear-gradient(168deg, #fcefe9 0%, #f4d4ca 55%, #ecc2b4 100%);
+  --env-border: rgba(180, 100, 90, 0.24);
+  --env-shadow:
+    0 4px 24px rgba(170, 90, 80, 0.18),
+    0 1px 6px rgba(150, 70, 60, 0.12);
+  --env-shadow-hover:
+    0 10px 36px rgba(170, 90, 80, 0.24),
+    0 2px 8px rgba(150, 70, 60, 0.16);
+  --shade-rgb: 195, 110, 95;
+  --seam: #b06a5c;
+
+  --wax-bg: radial-gradient(circle at 37% 30%, #c96a82, #7e2440);
+  --wax-ring: rgba(250, 210, 215, 0.4);
+  --wax-text: #fde8ec;
+
+  --hint-rgb: 165, 80, 95;
+  --overlay: rgba(150, 75, 75, 0.22);
+}
+
+/* ---- Zümrüt: emerald & cream ---- */
+.theme-emerald {
+  --bg: radial-gradient(ellipse at 50% 35%, #f4f8f1 0%, #e3eddd 55%, #cfdfc8 100%);
+
+  --accent: #2e6b45;
+  --accent-rgb: 46, 107, 69;
+  --ink: #1f4d33;
+  --ink-strong: #173f29;
+  --ink-soft: #3a6b4d;
+  --link: #2a5e3e;
+  --link-hover: #1b4a2d;
+  --card-bg: linear-gradient(165deg, #fbfbf2 0%, #f3f3e0 30%, #e8ecd2 70%, #dde4c6 100%);
+  --card-shadow:
+    0 8px 48px rgba(40, 80, 50, 0.2),
+    0 2px 10px rgba(40, 80, 50, 0.12),
+    inset 0 0 60px rgba(120, 165, 110, 0.12);
+
+  --env-body-bg: linear-gradient(148deg, #f0f6ea 0%, #e0ecd4 55%, #cce0ba 100%);
+  --env-flap-bg: linear-gradient(168deg, #eef5e6 0%, #dcebc9 55%, #c8ddb0 100%);
+  --env-border: rgba(70, 120, 60, 0.25);
+  --env-shadow:
+    0 4px 24px rgba(60, 110, 60, 0.18),
+    0 1px 6px rgba(40, 90, 40, 0.12);
+  --env-shadow-hover:
+    0 10px 36px rgba(60, 110, 60, 0.24),
+    0 2px 8px rgba(40, 90, 40, 0.16);
+  --shade-rgb: 95, 140, 80;
+  --seam: #4d7a45;
+
+  --wax-bg: radial-gradient(circle at 37% 30%, #4e9a66, #1c4d2e);
+  --wax-ring: rgba(200, 235, 205, 0.38);
+  --wax-text: #e6f5e9;
+
+  --hint-rgb: 45, 95, 60;
+  --overlay: rgba(30, 70, 45, 0.25);
+}
+
+/* Theme class on body drives the page background */
+body[class*='theme-'] {
+  background: var(--bg);
+}
